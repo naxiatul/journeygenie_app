@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Country Information</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="country-info.css">
+</head>
+<body>
+  <nav class="sidebar close">
+    <header>
+      <span class="image">
+        <img src="image/logo2.png" alt="logo" id="logo">
+      </span>
+      
+      <i class='bx bx-chevron-right toggle' ></i>
+    </header>
+
+    <div class="menu-bar">
+      <div class="menu">
+        <li class="search-box">
+          <button onclick="searchCountry('country_input')"><i class="bx bx-search-alt-2 icon"></i></button>
+          <input type="text" placeholder="Search country" id="country_input">
+        </li>
+        <ul class="menu-links">
+          <li class="nav-link" onclick="closeDropdowns()">
+            <a href="index.html">
+              <i class='bx bx-home icon'></i>
+              <span class="text nav-text">Home</span>
+            </a>
+          </li>
+          <li class="nav-link" id="popular" onclick="toggleDropdown(event)">
+            <i class='bx bxs-plane-alt icon'></i>
+            <span class="text nav-text">Popular Destination</span>
+          </li>
+          <ul class="dropdown">
+            <li class="dropdown-item"><a href="korea.html">South Korea</a></li>
+            <li class="dropdown-item"><a href="malaysia.html">Malaysia</a></li>
+            <li class="dropdown-item"><a href="jepun.html">Japan</a></li>
+            <li class="dropdown-item"><a href="switz.html">Switzerland</a></li>
+            <li class="dropdown-item"><a href="italy.html">Italy</a></li>
+          </ul>
+          <li class="nav-link" onclick="closeDropdowns()">
+            <a href="homenote.html">
+              <i class='bx bx-note icon'></i>
+              <span class="text nav-text">Notes</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="country">
+    <div class="top">Country Information</div> 
+    <div class="container">
+      <img src="#" alt="Country Flag" class="country-flag" id="country-flag">
+      <div class="country-name" id="country-name">Country Name</div>
+      <div class="messafe" id="message"></div>
+      <div class="info-grid">
+        <div class="info">
+          <div class="item">
+            <i class="fa fa-globe" ></i>
+            <span data-title="Continent: " id="continent">Continent Name</span>
+          </div>
+          <div class="item">
+            <i class="fa fa-map" ></i>
+            <span data-title="Region: " id="region">Region Name</span>
+          </div>
+          <div class="item">
+            <i class="fa fa-map-signs"></i>
+            <span data-title="Subregion: " id="subregion">Subregion Name</span>
+          </div>
+          <div class="item">
+            <i class='bx bxs-city' ></i>
+            <span data-title="Capital City: " id="capital">Capital City</span>
+          </div>
+          <div class="item">
+            <i class="fa fa-language"></i>
+            <span data-title="Languages: " id="languages">Languages Name</span>
+          </div>
+          <div class="item">
+            <i class='bx bxs-time' ></i>
+            <span data-title="Time Zone: " id="timezones">Time Zone</span>
+          </div>
+          <div class="item">
+            <i class="fa fa-users"></i>
+            <span data-title="Population: " id="population">Population Number</span>
+          </div>
+          <div class="item">
+            <i class='bx bx-area' ></i>
+            <span data-title="Area: " id="area">Area Size</span>
+          </div>
+          <div class="item">
+            <i class="fa fa-money" ></i>
+            <span data-title="Currency: " id="currency">Currency Name</span>
+          </div>
+        </div>
+        <div class="info">
+          <div class="coat-of-arms">
+            <h1>Coat of Arms:</h1>
+            <img src="#" alt="Coat of Arms" id="coat-of-arms">
+          </div>
+          <div class="maps">
+            <h1>Maps:</h1>
+            <div class="map-link">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <a href="#" id="google-maps" target="_blank">Google Maps</a>
+            </div>
+            <div class="map-link">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <a href="#" id="openstreetmap" target="_blank">OpenStreetMap</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nearby-countries" id="nearby-countries">
+        <div class="title">Nearby Countries</div>
+        <hr>
+        <div class="card-container" id="card-container"></div>
+      </div>
+    </div>
+  </section>
+
+  <script src="nav.js"></script>
+  <script src="country-info.js"></script>
+</body>
+</html>

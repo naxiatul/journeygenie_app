@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Journey Genie!</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="destinfo.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="sidebar close">
+        <header>
+          <span class="image">
+            <img src="image/logo2.png" alt="logo" id="logo">
+          </span>
+          
+          <i class='bx bx-chevron-right toggle' ></i>
+        </header>
+    
+        <div class="menu-bar">
+          <div class="menu">
+            <li class="search-box">
+              <button onclick="searchCountry('country_input')"><i class="bx bx-search-alt-2 icon"></i></button>
+              <input type="text" placeholder="Search country" id="country_input">
+            </li>
+            <ul class="menu-links">
+              <li class="nav-link" onclick="closeDropdowns()">
+                <a href="index.html">
+                  <i class='bx bx-home icon'></i>
+                  <span class="text nav-text">Home</span>
+                </a>
+              </li>
+              <li class="nav-link" id="popular" onclick="toggleDropdown(event)">
+                <i class='bx bxs-plane-alt icon'></i>
+                <span class="text nav-text">Popular Destination</span>
+              </li>
+              <ul class="dropdown">
+                <li class="dropdown-item"><a href="korea.html">South Korea</a></li>
+                <li class="dropdown-item"><a href="malaysia.html">Malaysia</a></li>
+                <li class="dropdown-item"><a href="jepun.html">Japan</a></li>
+                <li class="dropdown-item"><a href="switz.html">Switzerland</a></li>
+                <li class="dropdown-item"><a href="italy.html">Italy</a></li>
+              </ul>
+              <li class="nav-link" onclick="closeDropdowns()">
+                <a href="homenote.html">
+                  <i class='bx bx-note icon'></i>
+                  <span class="text nav-text">Notes</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+    <section class="travel">
+        <img src="image/italy.jpg" alt="Italy View" class="image-travel">
+
+        <div class="title">
+            <span class="underline">Italy</span>
+        </div>
+            
+        <div class="desc">
+            <p>Italy is a captivating country renowned for its rich history, stunning art, and delicious cuisine.
+                From the ancient ruins of Rome, including the Colosseum and the Roman Forum,
+                to the romantic canals of Venice and the Renaissance treasures of Florence, Italy is a treasure trove of cultural heritage.
+                The countryside is equally enchanting, with picturesque landscapes in regions like Tuscany,
+                dotted with vineyards and charming villages. Italian cuisine is world-famous, featuring pasta, pizza, and gelato, 
+               often enjoyed in lively trattorias. Each region offers its own unique flavors and traditions.
+                Italy is also known for its fashion, with Milan being a global style capital.
+                With its warm people, beautiful architecture, and rich traditions, 
+               Italy is a dream destination for travelers seeking history, culture, and culinary delights.</p> 
+        </div>
+
+        <div class="container">
+            <div class="tips">Italy Travel Tips</div>
+            <hr>
+
+            <div class="container-card">
+                <div class="card">
+                  <i class='bx bx-sun'></i>
+                    <h3>BEST TIME TO VISIT</h3>
+                    <p>Plan the perfect time for your visit to Italy with this seasonal guide to weather, crowds, prices and events throughout the year.</p>
+                    <button onclick="openExternalLink('https://www.lonelyplanet.com/articles/best-time-to-visit-italy');">Read more</button>
+                </div>
+                <div class="card">
+                    <i class="fa fa-money"></i>
+                    <h3>MONEY BUDGET</h3>
+                    <p>These top budget tips can help you save money while exploring Italy.</p>
+                         <button onclick="openExternalLink('https://www.lonelyplanet.com/articles/italy-on-a-budget');">Read more</button>
+                </div>
+                <div class="card">
+                    <i class="fa fa-plane"></i>
+                    <h3>BEST PLACE TO VISIT</h3>
+                    <p>Italy is filled with remarkable places to explore.
+                        Each destination in Italy offers a unique blend of history, art, and natural beauty, making it a dream for travelers.
+                    </p>
+                    <button onclick="openExternalLink('https://www.lonelyplanet.com/italy/attractions');">Read more</button>
+                </div>
+                <div class="card">
+                  <i class='bx bx-bus' ></i>
+                    <h3>TRANSPORTATION</h3>
+                    <p>Your guide to traveling independently across Italy, from the Alps to the islands.</p>
+                        <button onclick="openExternalLink('https://www.lonelyplanet.com/articles/getting-around-italy');">Read more</button>
+                </div>
+                <div class="card">
+                  <i class='bx bx-bulb' ></i>
+                    <h3>THINGS TO KNOW</h3>
+                    <p>With so many attractions, it's hard to know where to begin with a trip to Italy. 
+                        Here's some local insight into the essential things to know before you go.</p>
+                        <button onclick="openExternalLink('https://www.lonelyplanet.com/articles/things-to-know-before-traveling-to-italy');">Read more</button>
+                </div>
+                <div class="card">
+                  <i class='bx bx-star' ></i>
+                    <h3>BEST THINGS TO DO</h3>
+                    <p>Italy has so many delights for visitors, it’s hard to know where to start. Lucky for you, 
+                        we’ve made this list of the best experiences all over the country.</p>
+                    <button onclick="openExternalLink('https://www.lonelyplanet.com/articles/top-things-to-do-in-italy');">Read more</button>
+                </div>
+            </div>
+      </div>
+    </section>
+    <script src="nav.js"></script>
+    
+  </body>
+</html>

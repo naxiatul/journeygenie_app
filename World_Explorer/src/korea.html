@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Journey Genie!</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="destinfo.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="sidebar close">
+      <header>
+        <span class="image">
+          <img src="image/logo2.png" alt="logo" id="logo">
+        </span>
+        
+        <i class='bx bx-chevron-right toggle' ></i>
+      </header>
+  
+      <div class="menu-bar">
+        <div class="menu">
+          <li class="search-box">
+            <button onclick="searchCountry('country_input')"><i class="bx bx-search-alt-2 icon"></i></button>
+            <input type="text" placeholder="Search country" id="country_input">
+          </li>
+          <ul class="menu-links">
+            <li class="nav-link" onclick="closeDropdowns()">
+              <a href="index.html">
+                <i class='bx bx-home icon'></i>
+                <span class="text nav-text">Home</span>
+              </a>
+            </li>
+            <li class="nav-link" id="popular" onclick="toggleDropdown(event)">
+              <i class='bx bxs-plane-alt icon'></i>
+              <span class="text nav-text">Popular Destination</span>
+            </li>
+            <ul class="dropdown">
+              <li class="dropdown-item"><a href="korea.html">South Korea</a></li>
+              <li class="dropdown-item"><a href="malaysia.html">Malaysia</a></li>
+              <li class="dropdown-item"><a href="jepun.html">Japan</a></li>
+              <li class="dropdown-item"><a href="switz.html">Switzerland</a></li>
+              <li class="dropdown-item"><a href="italy.html">Italy</a></li>
+            </ul>
+            <li class="nav-link" onclick="closeDropdowns()">
+              <a href="homenote.html">
+                <i class='bx bx-note icon'></i>
+                <span class="text nav-text">Notes</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <section class="travel">
+        <img src="image/korea.jpg" alt="Korea View" class="image-travel">
+
+        <div class="title">
+            <span class="underline">South Korea</span>
+        </div>
+            
+        <div class="desc">
+            <p>South Korea is an exciting travel destination
+                known for its unique blend of modernity and tradition.
+                The bustling capital, Seoul, offers historic palaces,
+                vibrant shopping districts and a lively nightlife scene. 
+                Visitors can explore beautiful natural landscapes on Jeju Island, 
+                famous for its stunning beaches and volcanic formations. 
+                Cultural treasures abound in cities like Gyeongju, 
+                where ancient sites reflect the country's rich history. 
+                Delicious cuisine, from savory Korean barbecue to spicy kimchi,  
+                adds to the experience. With efficient public transportation and friendly locals,
+                South Korea is a welcoming place for travelers seeking adventure and cultural enrichment.</p> 
+        </div>
+
+        <div class="container">
+            <div class="tips">South Korea Travel Tips</div>
+            <hr>
+
+            <div class="container-card">
+                <div class="card">
+                  <i class='bx bx-sun'></i>
+                    <h3>BEST TIME TO VISIT</h3>
+                    <p>South Korea goes through four distinct seasons,
+                       so knowing what to expect and how to prepare will go a long way toward getting the best out of your vacation.</p>
+                    <button onclick="openExternalLink('https://www.lonelyplanet.com/articles/best-time-to-visit-south-korea');">Read more</button>
+                </div>
+                <div class="card">
+                    <i class="fa fa-money"></i>
+                    <h3>MONEY BUDGET</h3>
+                    <p>If you’re looking to travel to South Korea on a budget,
+                         follow this money-saving guide, from advice on SIM cards to tips on transit.</p>
+                         <button onclick="openExternalLink('https://www.lonelyplanet.com/articles/south-korea-on-a-budget');">Read more</button>
+                </div>
+                <div class="card">
+                    <i class="fa fa-plane"></i>
+                    <h3>BEST PLACE TO VISIT</h3>
+                    <p>Discover Korea's top destinations, Each destination offers a unique glimpse into 
+                      Korea's rich culture and natural beauty, making it an unforgettable experience.
+                    </p>
+                    <button onclick="openExternalLink('https://www.lonelyplanet.com/south-korea/attractions');">Read more</button>
+                </div>
+                <div class="card">
+                  <i class='bx bx-bus' ></i>
+                    <h3>TRANSPORTATION</h3>
+                    <p>With some of the best public transport in the world, South Korea is a gift to travelers. 
+                        Here's what you need to know about getting around when you arrive.</p>
+                        <button onclick="openExternalLink('https://www.lonelyplanet.com/articles/getting-around-south-korea');">Read more</button>
+                </div>
+                <div class="card">
+                  <i class='bx bx-bulb' ></i>
+                    <h3>THINGS TO KNOW</h3>
+                    <p>Before your trip to this cultural powerhouse, read our tips for planning, 
+                        navigating etiquette, health and safety concerns and more.</p>
+                        <button onclick="openExternalLink('https://www.lonelyplanet.com/articles/things-to-know-before-traveling-to-south-korea');">Read more</button>
+                </div>
+                <div class="card">
+                  <i class='bx bx-star' ></i>
+                    <h3>BEST THINGS TO DO</h3>
+                    <p>South Korea has an incredible mix of attractions that will keep you coming back for more.
+                    These are 11 of our favorites</p>
+                    <button onclick="openExternalLink('https://www.lonelyplanet.com/articles/top-things-to-do-in-south-korea');">Read more</button>
+                </div>
+            </div>
+      </div>
+    </section>
+    <script src="nav.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Trad:wght@100..400&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-color: #a6d3ed;
+    --sidebar-color: #FFF;
+    --primary-color: #eb5436;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #707070;
+
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+
+body {
+    height: 100vh;
+    background: var(--body-color);
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background: var(--sidebar-color);
+    transition: var(--tran-05);
+    z-index: 100;
+}
+
+.sidebar.close {
+    width: 88px;
+}
+
+.sidebar .text {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: var(--tran-02);
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.sidebar.close .text {
+    opacity: 0;
+}
+
+.sidebar .image {
+    display: flex;
+    justify-content: center; 
+    align-items: center;        
+}
+
+.sidebar .image img {
+    width: 100%;
+}
+
+.sidebar.close .image img {
+    min-width: 60px;
+}
+
+.sidebar li {
+    height: 50px;
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    transition: var(--tran-04);
+}
+
+.sidebar li .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    font-size: 20px;
+}
+
+.sidebar li .icon, .sidebar li .text {
+    color: var(--text-color);
+    transition: var(--tran-02);
+}
+
+.sidebar header {
+    position: relative;
+}
+
+.sidebar header .toggle {
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%) rotate(180deg);
+    height: 25px;
+    width: 25px;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--sidebar-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+    transition: var(--tran-03);
+}
+
+.sidebar.close header .toggle {
+    transform: translateY(-50%);
+}
+
+.sidebar .menu {
+    margin-top: 30px;
+}
+
+.sidebar .search-box {
+    background: var(--primary-color-light);
+    border-radius: 6px;
+    z-index: 10;
+}
+
+.search-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    background: var(--primary-color-light);
+}
+
+.search-box button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.sidebar li a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: var(--tran-04);
+}
+
+.sidebar li a:hover, .sidebar.close .search-box:hover, .nav-link:hover {
+    background: var(--primary-color);
+}
+
+.sidebar li a:hover .icon, .sidebar li a:hover .text, .sidebar.close .search-box:hover .icon, .nav-link:hover .icon, .nav-link:hover .text {
+    color: var(--sidebar-color);
+}
+
+.sidebar .menu-bar {
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dropdown {
+    display: none;
+    flex-direction: column;
+    margin-left: 30px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.dropdown-item {
+    font-size: 14px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.dropdown-item a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    padding: 5px 10px;
+    border-radius: 6px;
+    transition: var(--tran-02);
+}
+
+.dropdown-item a:hover {
+    background: var(--primary-color);
+    color: var(--sidebar-color);
+}
+
+.nav-link.active + .dropdown {
+    display: flex;
+}
+
+.nav-link.active {
+    background: var(--primary-color);
+}
+
+.nav-link.active .icon, .nav-link.active .text {
+    color: var(--sidebar-color);
+}
+
+.sidebar:not(.close) .nav-link.active + .dropdown {
+    display: flex;
+}
+
+.sidebar.close .nav-link.active + .dropdown {
+    display: none;
+}
+
+
+

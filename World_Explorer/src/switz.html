@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Journey Genie!</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="destinfo.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="sidebar close">
+      <header>
+        <span class="image">
+          <img src="image/logo2.png" alt="logo" id="logo">
+        </span>
+        
+        <i class='bx bx-chevron-right toggle' ></i>
+      </header>
+  
+      <div class="menu-bar">
+        <div class="menu">
+          <li class="search-box">
+            <button onclick="searchCountry('country_input')"><i class="bx bx-search-alt-2 icon"></i></button>
+            <input type="text" placeholder="Search country" id="country_input">
+          </li>
+          <ul class="menu-links">
+            <li class="nav-link" onclick="closeDropdowns()">
+              <a href="index.html">
+                <i class='bx bx-home icon'></i>
+                <span class="text nav-text">Home</span>
+              </a>
+            </li>
+            <li class="nav-link" id="popular" onclick="toggleDropdown(event)">
+              <i class='bx bxs-plane-alt icon'></i>
+              <span class="text nav-text">Popular Destination</span>
+            </li>
+            <ul class="dropdown">
+              <li class="dropdown-item"><a href="korea.html">South Korea</a></li>
+              <li class="dropdown-item"><a href="malaysia.html">Malaysia</a></li>
+              <li class="dropdown-item"><a href="jepun.html">Japan</a></li>
+              <li class="dropdown-item"><a href="switz.html">Switzerland</a></li>
+              <li class="dropdown-item"><a href="italy.html">Italy</a></li>
+            </ul>
+            <li class="nav-link" onclick="closeDropdowns()">
+              <a href="homenote.html">
+                <i class='bx bx-note icon'></i>
+                <span class="text nav-text">Notes</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <section class="travel">
+        <img src="image/switz.jpg" alt="Switzerland View" class="image-travel">
+
+        <div class="title">
+            <span class="underline">Switzerland</span>
+        </div>
+            
+        <div class="desc">
+            <p>Switzerland is a beautiful country known for its breathtaking landscapes, charming towns, and world-famous chocolate and cheese. 
+                Surrounded by the Alps, Switzerland offers incredible mountain views, especially in places like Zermatt, 
+                where you can see the Matterhorn. Cities like Zurich and Geneva mix modern life with history, 
+                featuring lakeside views, historic architecture, and vibrant cultural scenes. 
+                Switzerland is also a top destination for skiing, hiking, and scenic train rides, like the Glacier Express,
+                 which travels through picturesque valleys and snow-capped mountains. With efficient public transport and warm 
+                hospitality, Switzerland is an ideal spot for nature lovers and city explorers alike.</p> 
+        </div>
+
+        <div class="container">
+            <div class="tips">Switzerland Travel Tips</div>
+            <hr>
+
+            <div class="container-card">
+                <div class="card">
+                  <i class='bx bx-sun'></i>
+                    <h3>BEST TIME TO VISIT</h3>
+                    <p>Spend any length of time in Switzerland, and you’ll come to realize just how distinct
+                         the seasons are here and how well the country wears them.</p>
+                    <button onclick="openExternalLink('https://www.lonelyplanet.com/articles/the-best-time-to-go-to-switzerland');">Read more</button>
+                </div>
+                <div class="card">
+                    <i class="fa fa-money"></i>
+                    <h3>MONEY BUDGET</h3>
+                    <p>Switzerland is one of the world’s most expensive places, it’s true. 
+                        Follow these tips to get the most out of this beautiful nation for less.</p>
+                         <button onclick="openExternalLink('https://www.lonelyplanet.com/articles/the-best-things-in-schweiz-are-free-switzerland-on-a-budget');">Read more</button>
+                </div>
+                <div class="card">
+                    <i class="fa fa-plane"></i>
+                    <h3>BEST PLACE TO VISIT</h3>
+                    <p>Switzerland is home to breathtaking destinations that captivate travelers.
+                        Each of these places showcases Switzerland’s stunning landscapes and rich culture.
+                    </p>
+                    <button onclick="openExternalLink('https://www.lonelyplanet.com/switzerland/attractions');">Read more</button>
+                </div>
+                <div class="card">
+                  <i class='bx bx-bus' ></i>
+                    <h3>TRANSPORTATION</h3>
+                    <p>Traveling in scenic Switzerland is a joy. Here are the best ways to get around.</p>
+                        <button onclick="openExternalLink('https://www.lonelyplanet.com/articles/getting-around-switzerland');">Read more</button>
+                </div>
+                <div class="card">
+                  <i class='bx bx-bulb' ></i>
+                    <h3>THINGS TO KNOW</h3>
+                    <p>With four languages, dizzying mountain peaks and thriving cities, Switzerland has a lot on offer.
+                         Here's what you need to know before you go.</p>
+                        <button onclick="openExternalLink('https://www.lonelyplanet.com/articles/things-to-know-before-traveling-to-switzerland');">Read more</button>
+                </div>
+                <div class="card">
+                  <i class='bx bx-star' ></i>
+                    <h3>BEST THINGS TO DO</h3>
+                    <p>From biking and hiking to wildlife watching, experience the best of the Swiss 
+                        Alps with this guide to the top things to do.</p>
+                    <button onclick="openExternalLink('https://www.lonelyplanet.com/articles/top-things-to-do-in-the-swiss-alps');">Read more</button>
+                </div>
+            </div>
+      </div>
+    </section>
+    <script src="nav.js"></script>
+    
+  </body>
+</html>

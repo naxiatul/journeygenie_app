@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Journey Genie!</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <nav class="sidebar close">
+    <header>
+      <span class="image">
+        <img src="image/logo2.png" alt="logo" id="logo">
+      </span>
+      
+      <i class='bx bx-chevron-right toggle' ></i>
+    </header>
+
+    <div class="menu-bar">
+      <div class="menu">
+        <li class="search-box">
+          <button onclick="searchCountry('country_input')"><i class="bx bx-search-alt-2 icon"></i></button>
+          <input type="text" placeholder="Search country" id="country_input">
+        </li>
+        <ul class="menu-links">
+          <li class="nav-link" onclick="closeDropdowns()">
+            <a href="index.html">
+              <i class='bx bx-home icon'></i>
+              <span class="text nav-text">Home</span>
+            </a>
+          </li>
+          <li class="nav-link" id="popular" onclick="toggleDropdown(event)">
+            <i class='bx bxs-plane-alt icon'></i>
+            <span class="text nav-text">Popular Destination</span>
+          </li>
+          <ul class="dropdown">
+            <li class="dropdown-item"><a href="korea.html">South Korea</a></li>
+            <li class="dropdown-item"><a href="malaysia.html">Malaysia</a></li>
+            <li class="dropdown-item"><a href="jepun.html">Japan</a></li>
+            <li class="dropdown-item"><a href="switz.html">Switzerland</a></li>
+            <li class="dropdown-item"><a href="italy.html">Italy</a></li>
+          </ul>
+          <li class="nav-link" onclick="closeDropdowns()">
+            <a href="homenote.html">
+              <i class='bx bx-note icon'></i>
+              <span class="text nav-text">Notes</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <section class="home">
+      <div class="header">
+          <h1 class="title">Welcome to Journey Genie!</h1>
+          <h4 class="desc">"Your Magic Guide for Every Journey"</h4>
+      </div>
+
+      <div class="search-container">
+          <input type="text" placeholder="Search Country" class="search-bar" id="country_input_2">
+          <button class="search-button" onclick="searchCountry('country_input_2')">
+              <i class="bx bx-search-alt-2 icon"></i>
+          </button>
+      </div>
+
+      <div class="popular">
+        <h2>Popular Destination</h2>
+        <div class="popular-container">
+            <div class="guide">
+                <img alt="Korea View" src="image/korea.jpg">
+                <div class="guide-content">
+                    <h3>South Korea</h3>
+                    <p>Korea is an exciting travel destination
+                        known for its unique blend of modernity and tradition.
+                        The bustling capital, Seoul, offers historic palaces,
+                        vibrant shopping districts and a lively nightlife scene.</p>
+                    <button onclick="window.location.href='korea.html';">Read more</button>
+                </div>
+            </div>
+            <div class="guide">
+                <img alt="Malaysia" src="image/malaysia.jpg">
+                <div class="guide-content">
+                    <h3>Malaysia</h3>
+                    <p>Malaysia is a lively and diverse country perfect for travelers who enjoy variety. 
+                        With warm weather year-round, Malaysia is an ideal destination for 
+                        anyone who loves a blend of culture, nature, and adventure.
+                    </p>
+                    <button onclick="window.location.href='malaysia.html';">Read more</button>
+                </div>
+            </div>
+            <div class="guide">
+                <img alt="Switzerland" src="image/switz.jpg">
+                <div class="guide-content">
+                    <h3>Switzerland</h3>
+                    <p>Explore budget-friendly romantic hotels in Himeji for couples. Discover affordable accommodations, travel tips, and local attractions for a memorable getaway.</p>
+                    <button onclick="window.location.href='switz.html';">Read more</button>
+                </div>
+            </div>
+        </div>
+      </div>
+  </section>
+  
+  <script src="nav.js"></script>
+</body>
+</html>
+ 

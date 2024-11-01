@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Journey Genie!</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="destinfo.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="sidebar close">
+      <header>
+        <span class="image">
+          <img src="image/logo2.png" alt="logo" id="logo">
+        </span>
+        
+        <i class='bx bx-chevron-right toggle' ></i>
+      </header>
+  
+      <div class="menu-bar">
+        <div class="menu">
+          <li class="search-box">
+            <button onclick="searchCountry('country_input')"><i class="bx bx-search-alt-2 icon"></i></button>
+            <input type="text" placeholder="Search country" id="country_input">
+          </li>
+          <ul class="menu-links">
+            <li class="nav-link" onclick="closeDropdowns()">
+              <a href="index.html">
+                <i class='bx bx-home icon'></i>
+                <span class="text nav-text">Home</span>
+              </a>
+            </li>
+            <li class="nav-link" id="popular" onclick="toggleDropdown(event)">
+              <i class='bx bxs-plane-alt icon'></i>
+              <span class="text nav-text">Popular Destination</span>
+            </li>
+            <ul class="dropdown">
+              <li class="dropdown-item"><a href="korea.html">South Korea</a></li>
+              <li class="dropdown-item"><a href="malaysia.html">Malaysia</a></li>
+              <li class="dropdown-item"><a href="jepun.html">Japan</a></li>
+              <li class="dropdown-item"><a href="switz.html">Switzerland</a></li>
+              <li class="dropdown-item"><a href="italy.html">Italy</a></li>
+            </ul>
+            <li class="nav-link" onclick="closeDropdowns()">
+              <a href="homenote.html">
+                <i class='bx bx-note icon'></i>
+                <span class="text nav-text">Notes</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <section class="travel">
+        <img src="image/malaysia.jpg" alt="Malaysia View" class="image-travel">
+
+        <div class="title">
+            <span class="underline">Malaysia</span>
+        </div>
+            
+        <div class="desc">
+            <p>Malaysia is a lively and diverse country perfect for travelers who enjoy variety. 
+                The capital, Kuala Lumpur, is known for its towering skyscrapers like the Petronas Towers, lively street markets, and cultural landmarks. 
+                Nature is abundant, with tropical islands like Langkawi, rainforests, and even Mount Kinabalu, a popular hiking spot. 
+                The country’s food is a delicious mix of Malay, Chinese, and Indian flavors, offering local favorites like nasi lemak and satay. 
+                With warm weather year-round, Malaysia is an ideal destination for anyone who loves a blend of culture, nature, and adventure</p> 
+        </div>
+
+        <div class="container">
+            <div class="tips">Malaysia Travel Tips</div>
+            <hr>
+
+            <div class="container-card">
+                <div class="card">
+                  <i class='bx bx-sun'></i>
+                    <h3>BEST TIME TO VISIT</h3>
+                    <p>Malaysia has two climatic seasons: dry and hot, and wet and hot.
+                         Don't let the term 'dry season' fool you – it’s humid in Malaysia year-round and there's always a chance of rain.</p>
+                    <button onclick="openExternalLink('https://www.lonelyplanet.com/articles/best-time-to-visit-malaysia');">Read more</button>
+                </div>
+                <div class="card">
+                    <i class="fa fa-money"></i>
+                    <h3>MONEY BUDGET</h3>
+                    <p>Malaysia should really be better known as a budget travel destination. It's easy to travel around, stay and eat cheaply with these top budget tips.</p>
+                         <button onclick="openExternalLink('https://www.lonelyplanet.com/articles/malaysia-on-a-budget');">Read more</button>
+                </div>
+                <div class="card">
+                    <i class="fa fa-plane"></i>
+                    <h3>BEST PLACE TO VISIT</h3>
+                    <p>Malaysia is home to many incredible destinations for travelers.
+                        Malaysia provides a diverse range of experiences that cater to all types of travelers.
+                    </p>
+                    <button onclick="openExternalLink('https://www.lonelyplanet.com/malaysia/attractions');">Read more</button>
+                </div>
+                <div class="card">
+                  <i class='bx bx-bus' ></i>
+                    <h3>TRANSPORTATION</h3>
+                    <p>Malaysia is divided between the Malay peninsula and tropical Sabah and Sarawak on Borneo, but getting around is easy with these simple tips.</p>
+                        <button onclick="openExternalLink('https://www.lonelyplanet.com/articles/getting-around-malaysia');">Read more</button>
+                </div>
+                <div class="card">
+                  <i class='bx bx-bulb' ></i>
+                    <h3>THINGS TO KNOW</h3>
+                    <p>From what to pack to social etiquette, here is everything you need to know before visiting Malaysia.</p>
+                        <button onclick="openExternalLink('https://www.lonelyplanet.com/articles/things-to-know-before-traveling-to-malaysia');">Read more</button>
+                </div>
+                <div class="card">
+                  <i class='bx bx-star' ></i>
+                    <h3>BEST THINGS TO DO</h3>
+                    <p>With so many incredible things to do in Malaysia, it can be hard to know where to begin. Start with our shortlist of the 15 best experiences available.</p>
+                    <button onclick="openExternalLink('https://www.lonelyplanet.com/articles/top-things-to-do-in-malaysia');">Read more</button>
+                </div>
+            </div>
+      </div>
+    </section>
+    <script src="nav.js"></script>
+    
+  </body>
+</html>

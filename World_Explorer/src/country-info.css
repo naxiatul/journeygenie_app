@@ -1,0 +1,210 @@
+.country {
+    position: relative;
+    height: 100vh;
+    margin-left: 250px;
+    width: 100vw;
+    transition: margin-left 0.5s ease;
+}
+
+.sidebar.close ~ .country {
+    margin-left: 88px;
+    width: calc(100% - 88px);
+}
+
+.top {
+    font-family: 'Lucida Calligraphy', cursive;
+    background: linear-gradient(135deg, #ff6648, #f8866f, #f2ccc3);
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 40px;
+    font-weight: 500;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 5%;
+}
+
+.container {
+    width: 85%;
+    margin: 20px auto;
+    background: var(--sidebar-color);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.country-flag {
+    display: block;
+    margin: 0 auto 20px;
+    width: 200px;
+    height: auto;
+}
+
+.country-name {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.country-name::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 15px auto 0;
+}
+
+.message {
+    display: none;
+    background-color: var(--toggle-color);
+    color: red;
+    padding: 15px;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.info-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.info-grid .info {
+    width: 48%;
+    margin-bottom: 30px;
+}
+
+.info-grid .info .item {
+    background: linear-gradient(135deg, #D4E7FE, #FFFFFF);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-grid .info .item:hover {
+    background-color: #e9ecef;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.info-grid .info .item i {
+    margin-right: 15px;
+    font-size: 30px;
+}
+
+.info-grid .info .item span {
+    font-size: 18px;
+}
+
+.info-grid .info .item span::before {
+    content: attr(data-title);
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.info-grid .coat-of-arms, .info-grid .maps {
+    text-align: center;
+    background: linear-gradient(135deg, #ebf4ff, #FFFFFF);
+    padding: 20px;
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    width: 100%;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-grid .coat-of-arms:hover, .info-grid .maps:hover {
+    background-color: #e9ecef;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);    
+}
+
+.info-grid .maps .map-link {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: center; 
+}
+
+.info-grid .maps .map-link i {
+    color: #007bff; 
+    margin-right: 10px;
+    font-size: 22px; 
+}
+
+.info-grid .maps a {
+    color: #007bff;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color var(--tran-02)
+}
+
+.info-grid .maps a:hover {
+    color: #014b9b;
+}
+
+.info-grid .coat-of-arms img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.nearby-countries {
+    margin-top: 40px;
+}
+
+.nearby-countries .title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.nearby-countries .card-container {
+    margin-top: 5%;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nearby-countries .card {
+    background: var(--primary-color-light);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nearby-countries .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nearby-countries .card img {
+    width: 100%;
+    height: 200px;
+}
+
+.nearby-countries .card-title {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.nearby-countries a {
+    text-decoration: none; 
+    color: black;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Journey Genie!</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="note.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="sidebar close">
+      <header>
+        <span class="image">
+          <img src="image/logo2.png" alt="logo" id="logo">
+        </span>
+        
+        <i class='bx bx-chevron-right toggle' ></i>
+      </header>
+  
+      <div class="menu-bar">
+        <div class="menu">
+          <li class="search-box">
+            <button onclick="searchCountry('country_input')"><i class="bx bx-search-alt-2 icon"></i></button>
+            <input type="text" placeholder="Search country" id="country_input">
+          </li>
+          <ul class="menu-links">
+            <li class="nav-link" onclick="closeDropdowns()">
+              <a href="index.html">
+                <i class='bx bx-home icon'></i>
+                <span class="text nav-text">Home</span>
+              </a>
+            </li>
+            <li class="nav-link" id="popular" onclick="toggleDropdown(event)">
+              <i class='bx bxs-plane-alt icon'></i>
+              <span class="text nav-text">Popular Destination</span>
+            </li>
+            <ul class="dropdown">
+              <li class="dropdown-item"><a href="korea.html">South Korea</a></li>
+              <li class="dropdown-item"><a href="malaysia.html">Malaysia</a></li>
+              <li class="dropdown-item"><a href="jepun.html">Japan</a></li>
+              <li class="dropdown-item"><a href="switz.html">Switzerland</a></li>
+              <li class="dropdown-item"><a href="italy.html">Italy</a></li>
+            </ul>
+            <li class="nav-link" onclick="closeDropdowns()">
+              <a href="homenote.html">
+                <i class='bx bx-note icon'></i>
+                <span class="text nav-text">Notes</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <section class="note">
+        <div class="container">
+            <div class="header">
+                <div class="back" onclick="goBack()"><i class='bx bx-arrow-back' ></i></div>
+            </div>
+            <div class="note-section">
+                <input type="text" class="note-title" placeholder="Note Title" id="noteTitle">
+            </div>
+            <div class="devider"></div>
+            <div class="date-section">
+                <div class="date-title">
+                    <i class="fa fa-calendar"></i> 
+                    Date Travel
+                </div>
+                <div class="date-container">
+                  <h4>Start Date:</h3>
+                  <input type="date" name="startDate" placeholder="" class="note-date" id="startDate">
+                  <h4>End Date:</h3>
+                  <input type="date" name="endDate" placeholder="" class="note-date" id="endDate">
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="note-content" contenteditable="true" placeholder="Type your note here..." id="noteContent"></div>
+            <div class="button">
+              <button class="edit" onclick="editNote()">Edit <i class="fa fa-pencil"></i></button>
+              <button class="save" onclick="saveNote()">Save <i class="fa fa-check" ></i></button>
+            </div>
+            
+            <div id="savePopup" class="modal-popup">
+              <div class="modal-content-popup">
+                  <h2>Attention</h2>
+                  <hr>
+                  <p>Note saved.</p>  
+                  <button id="closeSaveBtn">OK</button>
+              </div>          
+        </div>
+    </section>
+    <script src="nav.js"></script>
+    <script src="note.js"></script>
+    
+  </body>
+</html>

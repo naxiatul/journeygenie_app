@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Journey Genie!</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="destinfo.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="sidebar close">
+      <header>
+        <span class="image">
+          <img src="image/logo2.png" alt="logo" id="logo">
+        </span>
+        
+        <i class='bx bx-chevron-right toggle' ></i>
+      </header>
+  
+      <div class="menu-bar">
+        <div class="menu">
+          <li class="search-box">
+            <button onclick="searchCountry('country_input')"><i class="bx bx-search-alt-2 icon"></i></button>
+            <input type="text" placeholder="Search country" id="country_input">
+          </li>
+          <ul class="menu-links">
+            <li class="nav-link" onclick="closeDropdowns()">
+              <a href="index.html">
+                <i class='bx bx-home icon'></i>
+                <span class="text nav-text">Home</span>
+              </a>
+            </li>
+            <li class="nav-link" id="popular" onclick="toggleDropdown(event)">
+              <i class='bx bxs-plane-alt icon'></i>
+              <span class="text nav-text">Popular Destination</span>
+            </li>
+            <ul class="dropdown">
+              <li class="dropdown-item"><a href="korea.html">South Korea</a></li>
+              <li class="dropdown-item"><a href="malaysia.html">Malaysia</a></li>
+              <li class="dropdown-item"><a href="jepun.html">Japan</a></li>
+              <li class="dropdown-item"><a href="switz.html">Switzerland</a></li>
+              <li class="dropdown-item"><a href="italy.html">Italy</a></li>
+            </ul>
+            <li class="nav-link" onclick="closeDropdowns()">
+              <a href="homenote.html">
+                <i class='bx bx-note icon'></i>
+                <span class="text nav-text">Notes</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <section class="travel">
+        <img src="image/jepun.jpg" alt="Japan View" class="image-travel">
+
+        <div class="title">
+            <span class="underline">Japan</span>
+        </div>
+            
+        <div class="desc">
+            <p>Japan is a unique country that seamlessly blends ancient traditions with cutting-edge modernity. 
+                From the bustling streets of Tokyo, filled with neon lights and skyscrapers, 
+                to the serene temples and gardens of Kyoto, Japan offers a diverse range of experiences. 
+                Visitors can explore historic sites like the iconic Mount Fuji, traditional tea houses, and beautiful cherry blossoms in spring.
+                 Japan's cuisine is world-renowned, featuring sushi, ramen, and tempura, often enjoyed in both casual eateries and fine dining.
+                 The country is also known for its efficient public transportation, including the famous Shinkansen (bullet trains), making it easy to travel between cities. With its rich culture, 
+                stunning landscapes, and friendly people, Japan is a captivating destination for any traveler.</p> 
+        </div>
+
+        <div class="container">
+            <div class="tips">Japan Travel Tips</div>
+            <hr>
+
+            <div class="container-card">
+                <div class="card">
+                  <i class='bx bx-sun'></i>
+                    <h3>BEST TIME TO VISIT</h3>
+                    <p>Whether you’re looking to dive into the crowded streets of downtown Tokyo or find zen-like peace amongst tree-cloaked mountains, there’s a season that’s right for you in Japan.
+                        Here’s a guide to choosing the perfect time to visit Japan.</p>
+                    <button onclick="openExternalLink('https://www.lonelyplanet.com/articles/best-time-to-travel-to-japan');">Read more</button>
+                </div>
+                <div class="card">
+                    <i class="fa fa-money"></i>
+                    <h3>MONEY BUDGET</h3>
+                    <p>Keep costs low when exploring Japan with these top money-saving tips.</p>
+                         <button onclick="openExternalLink('https://www.lonelyplanet.com/articles/japan-on-a-budget');">Read more</button>
+                </div>
+                <div class="card">
+                    <i class="fa fa-plane"></i>
+                    <h3>BEST PLACE TO VISIT</h3>
+                    <p>Japan offers a wealth of incredible places to visit.
+                        Each of these destinations showcases Japan's unique culture and breathtaking landscapes.
+                    </p>
+                    <button onclick="openExternalLink('https://www.lonelyplanet.com/japan/attractions');">Read more</button>
+                </div>
+                <div class="card">
+                  <i class='bx bx-bus' ></i>
+                    <h3>TRANSPORTATION</h3>
+                    <p>With its myriad islands, towering mountains and megacities,
+                         Japan can be a daunting destination to get around. We've got everything you need to know.</p>
+                        <button onclick="openExternalLink('https://www.lonelyplanet.com/articles/getting-around-japan');">Read more</button>
+                </div>
+                <div class="card">
+                  <i class='bx bx-bulb' ></i>
+                    <h3>THINGS TO KNOW</h3>
+                    <p>Be ready for a visit to Japan with these tips on health, safety and etiquette.</p>
+                        <button onclick="openExternalLink('https://www.lonelyplanet.com/articles/things-to-know-before-traveling-to-japan');">Read more</button>
+                </div>
+                <div class="card">
+                  <i class='bx bx-star' ></i>
+                    <h3>BEST THINGS TO DO</h3>
+                    <p>From classic Japanese food and sights to local favorites and under-the-radar trends, these are 24 of the most inspiring experiences in Japan.</p>
+                    <button onclick="openExternalLink('https://www.lonelyplanet.com/articles/top-things-to-do-in-japan');">Read more</button>
+                </div>
+            </div>
+      </div>
+    </section>
+    <script src="nav.js"></script>
+    
+  </body>
+</html>

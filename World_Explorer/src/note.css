@@ -1,0 +1,173 @@
+.note {
+    position: relative;
+    height: 100vh;
+    margin-left: 250px;
+    width: 100vw;
+    transition: margin-left 0.5s ease;
+}
+
+.sidebar.close ~ .note {
+    margin-left: 88px;
+    width: calc(100% - 88px);
+}
+
+.container {
+    width: 85%;
+    height: 95%;
+    margin: 20px auto;
+    background: var(--sidebar-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.header {
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header .back {
+    font-size: 30px;
+    font-weight: 600;
+    color: #2E2E4D;
+    cursor: pointer;
+}
+
+.note-section {
+    margin: 20px 0;
+}
+
+.note-title {
+    font-size:30px;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-weight: 600;
+}
+
+.date-section {
+    margin: 20px 0;
+}
+
+.date-title {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.date-title i {
+    margin-right: 10px;
+}
+
+.note-date {
+    font-size: 16px;
+    margin: 5px 0;
+    border: none;
+    outline: none;
+}
+
+.note-content {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.divider {
+    border-bottom: 1px solid var(--toggle-color);
+    margin: 20px 0;
+}
+
+.date-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.date-container .note-date {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.date-container .note-date:first-child {
+    margin-left: 0;
+}
+
+.date-container .note-date:last-child {
+    margin-right: 0;
+}
+
+.button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 10px;
+    margin-right: 10px;
+}
+
+.button .save, .edit {
+    background: var(--primary-color); 
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+    width: 10%;
+}
+
+.modal-popup {
+    display: none; 
+    position: fixed; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    }
+
+.modal-content-popup {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1001;
+    width: 30%;
+    height: auto;
+}
+
+.modal-content-popup h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #000;
+}
+
+.modal-content-popup p {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.modal-content-popup button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    background: var(--primary-color);
+    border-radius: 5px;
+    border: none;
+    color: var(--sidebar-color);
+    font-size: 16px;
+    cursor: pointer;
+}
